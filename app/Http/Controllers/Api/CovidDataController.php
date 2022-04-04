@@ -27,7 +27,7 @@ class CovidDataController extends Controller
                 $title = explode(';', $line);
                 continue;
             }
-            $cityName = ucwords(str_replace(['á', 'Á', 'ã', 'â', 'é', 'ç', 'ó'], ['a', 'A', 'a', 'a', 'e', 'c', 'o'], explode(';', $line)[0]));
+            $cityName = ucwords(str_replace(['á', 'Á', 'ã', 'â', 'é', 'ç', 'ó', 'í'], ['a', 'A', 'a', 'a', 'e', 'c', 'o', 'i'], explode(';', $line)[0]));
             if ($cityName === $city) {
                 $cityCovidData = explode(';', str_replace("\n", '', $line));
             }

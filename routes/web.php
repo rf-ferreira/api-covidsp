@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Http;
 */
 
 Route::get('/', function () {
-    return redirect('/api/city/sao-paulo');
+    return view('welcome');
 });
